@@ -29,6 +29,11 @@ namespace ton_discusson_example
         public byte[] Payload { get; }
 
         /// <summary>
+        /// Size of payload data of the token
+        /// </summary>
+        public uint PayloadSize { get; }
+
+        /// <summary>
         /// Hashcode of the payload of the token
         /// </summary>
         public byte[] PayloadHash { get; }
@@ -51,14 +56,16 @@ namespace ton_discusson_example
         /// <param name="type"></param>
         /// <param name="payload"></param>
         /// <param name="payloadHash"></param>
-        public NftBase(byte[] address, TokenOwner owner, TokenType type, byte[] payload, byte[] payloadHash)
+        public NftBase(byte[] address, TokenOwner owner, TokenType type, byte[] payload, uint payloadSize, byte[] payloadHash)
         {
             Address = address;
             Owner = owner;
             Type = type;
             Payload = payload;
+            PayloadSize = payloadSize;
             PayloadHash = payloadHash;
         }
+
 
     }
 }

@@ -29,6 +29,11 @@ namespace ton_discusson_example
         public byte[] Payload { get; }
 
         /// <summary>
+        /// Size of payload data of the token
+        /// </summary>
+        public uint PayloadSize { get; }
+
+        /// <summary>
         /// Hashcode of the payload of the token
         /// </summary>
         public string PayloadHashString { get; }

@@ -21,8 +21,8 @@ namespace ton_discusson_example
         /// </summary>
         public abstract string ViewerAddress { get; }
 
-        public NftMovieBase(byte[] address, TokenOwner owner, TokenType type, MovieFormatTypes movieFormat, byte[] payload, byte[] payloadHash)
-            : base(address, owner, type, payload, payloadHash)
+        public NftMovieBase(byte[] address, TokenOwner owner, TokenType type, MovieFormatTypes movieFormat, byte[] payload, uint payloadSize, byte[] payloadHash)
+            : base(address, owner, type, payload, payloadSize, payloadHash)
         {
             MovieFormat = movieFormat;
         }
